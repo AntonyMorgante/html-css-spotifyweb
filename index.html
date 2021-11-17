@@ -5,9 +5,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
     <title>Spotify Replica</title>
 </head>
 <body>
-    
+    <main>
+        <!-- Left nav -->
+        <nav>
+            <div id="nav-container" class="container flex-column spacebetween">
+                <ul class="upper flex-column">
+                    <li id="logo"><a href="#"><img src="img/favicon.ico" alt=""><h3>Spotify</h3></a></li>
+                    <li>
+                        <ul id="library" class="flex-column">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Cerca</a></li>
+                            <li><a href="#">La tua libreria</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="uppercase">Playlist</p>
+                        <ul id="playlists" class="flex-column smallscreen-hidden">
+                            <li id="add-playlist"><a href=""></a></li>
+                            <li><a href="#">Nome playlist</a></li>
+                            <li><a href="#">Nome playlist</a></li>
+                            <li><a href="#">Nome playlist</a></li>
+                            <li><a href="#">Nome playlist</a></li>
+                            <li><a href="#">Nome playlist</a></li>
+                            <li><a href="#">Nome playlist</a></li>
+                            <li><a href="#">Nome playlist</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="downer flex-column">
+                    <li class="border-bot"><a href="#">Installa app</a></li>
+                    <li><a href="#">John Doe</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section>
+            <!-- Upgrade section -->
+            <div id="upgrade">
+                <a class="button uppercase" href="#">Effettua l'upgrade</a>
+            </div>
+
+            <!-- Upper nav -->
+            <ul id="browse-cathegories" class="flex-row centered wrap">
+                <li><a class="uppercase" href="#">In e<span id="highlighted">vide</span>nza</a></li>
+                <li><a class="uppercase" href="#">Podcast</a></li>
+                <li><a class="uppercase" href="#">Classifiche</a></li>
+                <li><a class="uppercase" href="#">Generi e mood</a></li>
+                <li><a class="uppercase" href="#">Nuove uscite</a></li>
+                <li><a class="uppercase" href="#">Scopri</a></li>
+            </ul>
+
+            <!-- Music selections -->
+            <div class="container">
+                <p class="big-title">Recently Played</p>
+                <ul id="first-row" class="flex-row wrap">
+                    <li class="album">
+                        <img class="hover-2" src="img/metal_lifting.jpg" alt="">
+                        <p class="album-title">Heavy Metal</p>
+                        <p class="author">Subtitle</p>
+                    </li>
+                    <li class="album">
+                        <img class="hover-2" src="img/stranger.jpeg" alt="">
+                        <p class="album-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</p>
+                        <p class="author">Subtitle</p>
+                    </li>
+                    <li class="album">
+                        <img class="hover-2" src="img/aquietplace.jpeg" alt="">
+                        <p class="album-title">A quiet place</p>
+                        <p class="author">Subtitle</p>
+                    </li>
+                    <li class="album">
+                        <img class="hover-2" src="img/split.jpeg" alt="">
+                        <p class="album-title">Split</p>
+                        <p class="author">Subtitle</p>
+                    </li>
+                    <li class="album">
+                        <img class="hover-2" src="img/cure.jpeg" alt="">
+                        <p class="album-title">A cure for wellness</p>
+                        <p class="author">Subtitle</p>
+                    </li>
+                    <li class="album">
+                        <img class="hover-2" src="img/sinister.jpeg" alt="">
+                        <p class="album-title">Sinister</p>
+                        <p class="author">Subtitle</p>
+                    </li>
+                </ul>
+                <p class="big-title">Creato per John Doe</p>
+                <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                <ul id="second-row" class="flex-row wrap">
+                    <li class="album">
+                        <img class="hover-2" src="img/radar.jpeg" alt="">
+                        <p class="album-title">Release Radar</p>
+                    </li>
+                    <li class="album">
+                        <img class="hover-2" src="img/mixdaily.jpeg" alt="">
+                        <p class="album-title">Daily Mix 1</p>
+                    </li>
+                </ul>
+                <p class="big-title">Artisti più popolari</p>
+                <p>Più ascolti, più saranno accurati i suggerimenti.</p>
+                <ul id="third-row" class="flex-row wrap">
+                    <li class="album">
+                        <img class="hover-2 circled" src="img/youg.jpeg" alt="">
+                        <p class="album-title">Lana del Rey</p>
+                        <p class="author"></p>
+                    </li>
+                    <li class="album">
+                        <img class="hover-2 circled" src="img/einaudi.jpeg" alt="">
+                        <p class="album-title">Ludovico Einaudi</p>
+                        <p class="author"></p>
+                    </li>
+                </ul>  
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-flex" class="flex-row spacebetween">
+            <ul class="flex-row"></ul>
+            <div class="flex-column">
+                <ul class="flex-row">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div id="flow" class="flex-row spacebetween">
+                    <span></span>
+                    <span >
+                        <span id="pointer"></span>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+            <ul class="flex-row"></ul>
+        </div>
+    </footer>
 </body>
 </html>
