@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
     <title>Spotify Replica</title>
@@ -14,18 +15,34 @@
         <nav>
             <div id="nav-container" class="container flex-column spacebetween">
                 <ul class="upper flex-column">
-                    <li id="logo"><a href="#"><img src="img/favicon.ico" alt=""><h3>Spotify</h3></a></li>
-                    <li>
-                        <ul id="library" class="flex-column">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Cerca</a></li>
-                            <li><a href="#">La tua libreria</a></li>
-                        </ul>
+                    <li id="logo">
+                        <a class="xsmobile flex-row center-aligned" href="#">
+                            <img src="img/logo-small.svg" alt=""><h3>Spotify</h3>
+                        </a>
+                        <a class="mobile" href="#">
+                            <img src="img/logo.svg" alt="">
+                        </a>
                     </li>
                     <li>
+                        <ul id="library" class="flex-column">
+                            <li class="flex-row center-aligned">
+                                <a href="#" id="current" class="mobil"><img src="img/home.svg" alt=""></a>
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="flex-row center-aligned">
+                                <a href="#" class="mobil"><img src="img/search.svg" alt=""></a>
+                                <a href="#">Cerca</a>
+                            </li>
+                            <li class="flex-row center-aligned">
+                                <a href="#" class="mobil"><img src="img/libreria.svg" alt=""></a>
+                                <a href="#">La tua libreria</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobil">
                         <p class="uppercase">Playlist</p>
                         <ul id="playlists" class="flex-column smallscreen-hidden">
-                            <li id="add-playlist"><a href=""></a></li>
+                            <li id="add-playlist"><a class="flex-row center-aligned" href=""><span class="square">+</span>Crea playlist</a></li>
                             <li><a href="#">Nome playlist</a></li>
                             <li><a href="#">Nome playlist</a></li>
                             <li><a href="#">Nome playlist</a></li>
@@ -37,8 +54,8 @@
                     </li>
                 </ul>
                 <ul class="downer flex-column">
-                    <li class="border-bot"><a href="#">Installa app</a></li>
-                    <li><a href="#">John Doe</a></li>
+                    <li id="download" class="border-bot "><a class="flex-row center-aligned" href="#"><img src="img/download.svg" alt=""> Installa app</a></li>
+                    <li id="profile"><a class="flex-row center-aligned" href="#"><img src="img/profile.svg" alt=""> John Doe</a></li>
                 </ul>
             </div>
         </nav>
@@ -60,41 +77,44 @@
             </ul>
 
             <!-- Music selections -->
-            <div class="container">
-                <p class="big-title">Recently Played</p>
-                <ul id="first-row" class="flex-row wrap">
-                    <li class="album">
-                        <img class="hover-2" src="img/metal_lifting.jpg" alt="">
-                        <p class="album-title">Heavy Metal</p>
-                        <p class="author">Subtitle</p>
-                    </li>
-                    <li class="album">
-                        <img class="hover-2" src="img/stranger.jpeg" alt="">
-                        <p class="album-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</p>
-                        <p class="author">Subtitle</p>
-                    </li>
-                    <li class="album">
-                        <img class="hover-2" src="img/aquietplace.jpeg" alt="">
-                        <p class="album-title">A quiet place</p>
-                        <p class="author">Subtitle</p>
-                    </li>
-                    <li class="album">
-                        <img class="hover-2" src="img/split.jpeg" alt="">
-                        <p class="album-title">Split</p>
-                        <p class="author">Subtitle</p>
-                    </li>
-                    <li class="album">
-                        <img class="hover-2" src="img/cure.jpeg" alt="">
-                        <p class="album-title">A cure for wellness</p>
-                        <p class="author">Subtitle</p>
-                    </li>
-                    <li class="album">
-                        <img class="hover-2" src="img/sinister.jpeg" alt="">
-                        <p class="album-title">Sinister</p>
-                        <p class="author">Subtitle</p>
-                    </li>
-                </ul>
-                <p class="big-title">Creato per John Doe</p>
+            <div class="container flex-column">
+                <div>
+                    <p class="big-title">Recently Played</p>
+                    <ul id="first-row" class="flex-row wrap">
+                        <li class="album">
+                            <img class="hover-2" src="img/metal_lifting.jpg" alt="">
+                            <p class="album-title">Heavy Metal</p>
+                            <p class="author">Subtitle</p>
+                        </li>
+                        <li class="album">
+                            <img class="hover-2" src="img/stranger.jpeg" alt="">
+                            <p class="album-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</p>
+                            <p class="author">Subtitle</p>
+                        </li>
+                        <li class="album">
+                            <img class="hover-2" src="img/aquietplace.jpeg" alt="">
+                            <p class="album-title">A quiet place</p>
+                            <p class="author">Subtitle</p>
+                        </li>
+                        <li class="album">
+                            <img class="hover-2" src="img/split.jpeg" alt="">
+                            <p class="album-title">Split</p>
+                            <p class="author">Subtitle</p>
+                        </li>
+                        <li class="album">
+                            <img class="hover-2" src="img/cure.jpeg" alt="">
+                            <p class="album-title">A cure for wellness</p>
+                            <p class="author">Subtitle</p>
+                        </li>
+                        <li class="album">
+                            <img class="hover-2" src="img/sinister.jpeg" alt="">
+                            <p class="album-title">Sinister</p>
+                            <p class="author">Subtitle</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="big-title">Creato per John Doe</p>
                 <p>Più ascolti, più accurati saranno i suggerimenti.</p>
                 <ul id="second-row" class="flex-row wrap">
                     <li class="album">
@@ -106,43 +126,56 @@
                         <p class="album-title">Daily Mix 1</p>
                     </li>
                 </ul>
-                <p class="big-title">Artisti più popolari</p>
-                <p>Più ascolti, più saranno accurati i suggerimenti.</p>
-                <ul id="third-row" class="flex-row wrap">
-                    <li class="album">
-                        <img class="hover-2 circled" src="img/youg.jpeg" alt="">
-                        <p class="album-title">Lana del Rey</p>
-                        <p class="author"></p>
-                    </li>
-                    <li class="album">
-                        <img class="hover-2 circled" src="img/einaudi.jpeg" alt="">
-                        <p class="album-title">Ludovico Einaudi</p>
-                        <p class="author"></p>
-                    </li>
-                </ul>  
+                </div>
+                <div>
+                    <p class="big-title">Artisti più popolari</p>
+                    <p>Più ascolti, più saranno accurati i suggerimenti.</p>
+                    <ul id="third-row" class="flex-row wrap">
+                        <li class="album">
+                            <img class="hover-2 circled" src="img/youg.jpeg" alt="">
+                            <p class="album-title">Lana del Rey</p>
+                            <p class="author"></p>
+                        </li>
+                        <li class="album">
+                            <img class="hover-2 circled" src="img/einaudi.jpeg" alt="">
+                            <p class="album-title">Ludovico Einaudi</p>
+                            <p class="author"></p>
+                        </li>
+                    </ul>  
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <div id="footer-flex" class="flex-row spacebetween">
-            <ul class="flex-row"></ul>
+            <ul class="flex-row">
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+                <li>d</li>
+            </ul>
             <div class="flex-column">
                 <ul class="flex-row">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
                 </ul>
                 <div id="flow" class="flex-row spacebetween">
-                    <span></span>
+                    <span>1</span>
                     <span >
-                        <span id="pointer"></span>
+                        <span id="pointer">2</span>
                     </span>
-                    <span></span>
+                    <span>3</span>
                 </div>
             </div>
-            <ul class="flex-row"></ul>
+            <ul class="flex-row">
+                <li>z</li>
+                <li>v</li>
+                <li>u</li>
+                <li>t</li>
+            </ul>
         </div>
     </footer>
 </body>
