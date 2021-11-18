@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
     <title>Spotify Replica</title>
 </head>
@@ -29,17 +29,17 @@
                     </li>
                     <li>
                         <ul id="library" class="flex-column">
-                            <li id="current" class="flex-row center-aligned">
-                                <a href="#" class="mobil"><img src="img/home.svg" alt=""></a>
-                                <a href="#">Home</a>
+                            <li id="current" class="flex-row center-aligned white-hover">
+                                <a href="#" class="mobil white-hovered"><img src="img/home.svg" alt=""></a>
+                                <a href="#" class="white-hovered">Home</a>
                             </li>
-                            <li class="flex-row center-aligned">
-                                <a href="#" class="mobil"><img src="img/search.svg" alt=""></a>
-                                <a href="#">Cerca</a>
+                            <li class="flex-row center-aligned white-hover">
+                                <a href="#" class="mobil white-hovered"><img src="img/search.svg" alt=""></a>
+                                <a href="#" class="white-hovered">Cerca</a>
                             </li>
-                            <li class="flex-row center-aligned">
-                                <a href="#" class="mobil"><img src="img/libreria.svg" alt=""></a>
-                                <a href="#">La tua libreria</a>
+                            <li class="flex-row center-aligned white-hover">
+                                <a href="#" class="mobil white-hovered"><img src="img/libreria.svg" alt=""></a>
+                                <a href="#" class="white-hovered">La tua libreria</a>
                             </li>
                         </ul>
                     </li>
@@ -58,7 +58,11 @@
                     </li>
                 </ul>
                 <ul class="downer flex-column">
-                    <li id="download" class="border-bot "><a class="flex-row center-aligned" href="#"><img src="img/download.svg" alt=""> Installa app</a></li>
+                    <li id="download" class="border-bot white-hover">
+                        <a class="flex-row center-aligned white-hovered" href="#">
+                            <img src="img/download.svg" alt=""> Installa app
+                        </a>
+                    </li>
                     <li id="profile"><a class="flex-row center-aligned" href="#"><img src="img/profile.svg" alt=""> John Doe</a></li>
                 </ul>
             </div>
@@ -86,32 +90,70 @@
                     <p class="big-title">Recently Played</p>
                     <ul id="first-row" class="flex-row wrap">
                         <li class="album">
-                            <img class="hover-2" src="img/metal_lifting.jpg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2" src="img/metal_lifting.jpg" alt="">
+                                <div class="black-layer hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div> 
                             <p class="album-title">Heavy Metal</p>
                             <p class="author">Subtitle</p>
                         </li>
                         <li class="album">
-                            <img class="hover-2" src="img/stranger.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2" src="img/stranger.jpeg" alt="">
+                                <div class="black-layer hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
                             <p class="album-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</p>
                             <p class="author">Subtitle</p>
                         </li>
                         <li class="album">
-                            <img class="hover-2" src="img/aquietplace.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2" src="img/aquietplace.jpeg" alt="">
+                                <div class="black-layer hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
                             <p class="album-title">A quiet place</p>
                             <p class="author">Subtitle</p>
                         </li>
                         <li class="album">
-                            <img class="hover-2" src="img/split.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2" src="img/split.jpeg" alt="">
+                                <div class="black-layer hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+                            
                             <p class="album-title">Split</p>
                             <p class="author">Subtitle</p>
                         </li>
                         <li class="album">
-                            <img class="hover-2" src="img/cure.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2" src="img/cure.jpeg" alt="">
+                                <div class="black-layer hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
+                           
                             <p class="album-title">A cure for wellness</p>
                             <p class="author">Subtitle</p>
                         </li>
                         <li class="album">
-                            <img class="hover-2" src="img/sinister.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2" src="img/sinister.jpeg" alt="">
+                                <div class="black-layer hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
                             <p class="album-title">Sinister</p>
                             <p class="author">Subtitle</p>
                         </li>
@@ -122,11 +164,23 @@
                     <p class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</p>
                     <ul id="second-row" class="flex-row wrap">
                         <li class="album">
-                            <img class="hover-2" src="img/radar.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2" src="img/radar.jpeg" alt="">
+                                <div class="black-layer hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
                             <p class="album-title">Release Radar</p>
                         </li>
                         <li class="album">
-                            <img class="hover-2" src="img/mixdaily.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2" src="img/mixdaily.jpeg" alt="">
+                                <div class="black-layer hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
                             <p class="album-title">Daily Mix 1</p>
                         </li>
                     </ul>
@@ -136,12 +190,24 @@
                     <p class="subtitle">Più ascolti, più saranno accurati i suggerimenti.</p>
                     <ul id="third-row" class="flex-row wrap">
                         <li class="album">
-                            <img class="hover-2 circled" src="img/youg.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2 circled" src="img/youg.jpeg" alt="">
+                                <div class="black-layer circled hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
                             <p class="album-title">Lana del Rey</p>
                             <p class="author"></p>
                         </li>
                         <li class="album">
-                            <img class="hover-2 circled" src="img/einaudi.jpeg" alt="">
+                            <div class="image-container">
+                                <img class="hover-2 circled" src="img/einaudi.jpeg" alt="">
+                                <div class="black-layer circled hidden"></div>
+                                <div class="hidden play">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            </div>
                             <p class="album-title">Ludovico Einaudi</p>
                             <p class="author"></p>
                         </li>
@@ -156,20 +222,24 @@
                 <div class="flex-row">
                     <img class="footer-image" src="img/sinister.jpeg" alt="">
                     <div class="flex-column">
-                        <p class="footer-title">Sinister</p>
-                        <p class="footer-author">Brano Nome</p>
+                        <a href="#" class="footer-title">Sinister</a>
+                        <a href="#" class="footer-author">Brano Nome</a>
                     </div>
                 </div>
                 <div class="flex-row ten-c-gapped">
-                    <i class="far fa-heart"></i> 
-                    <i class="far fa-folder"></i>
+                    <i class="far fa-heart greyed"></i> 
+                    <i class="far fa-folder greyed"></i>
                 </div>
             </div>
             <div class="flex-column ten-r-gapped">
                 <ul id="music-player" class="flex-row centered center-aligned">
                     <li><i class="fas fa-random"></i></li>
                     <li><i class="fas fa-step-backward"></i></li>
-                    <li><i id="play-button" class="far fa-play-circle"></i></li>
+                    <li>
+                        <div id="play-button-item">
+                            <i id="play-button" class="far fa-play-circle"></i>
+                        </div>
+                    </li>
                     <li><i class="fas fa-step-forward"></i></li>
                     <li><i class="fas fa-redo-alt"></i>/li>
                 </ul>
@@ -187,7 +257,11 @@
                 <li><i class="fas fa-list"></i></li>
                 <li><i class="fas fa-desktop"></i></li>
                 <li><i class="fas fa-volume-up"></i></li>
-                <li class="volume-bar"><div class="current-volume"></div></li>
+                <li class="volume-bar">
+                    <div class="current-volume">
+                        <div class="volumesphere hidden"></div>
+                    </div>
+                </li>
             </ul>
         </div>
     </footer>

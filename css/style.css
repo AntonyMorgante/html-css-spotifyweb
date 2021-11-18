@@ -8,15 +8,14 @@
 body{
     font-family: 'Montserrat', sans-serif; 
     font-size: 12px;
-    
 }
-
 
 main{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     color:rgb(165,165,165);
+    overflow: hidden;
 }
 
 .mobile{
@@ -39,6 +38,10 @@ a{
 
 ul{
     list-style-type: none;
+}
+
+a:hover{
+    color:white;
 }
 
 i{
@@ -109,6 +112,11 @@ nav{
     column-gap:5px;
 }
 
+.white-hover:hover .white-hovered{
+    filter:brightness(1);
+    color:white;
+}
+
 #current{
     position:relative;
     left:-20px;
@@ -130,6 +138,10 @@ nav{
     font-weight: bold;
 }
 
+#add-playlist:hover .square{
+    background-color: white;
+}
+
 .square{
     background-color: rgb(125,125,125);
     padding: 3px 11px;
@@ -147,6 +159,10 @@ nav{
 #library a img{
     width:30px;
     filter:brightness(0.5);
+}
+
+#library img:hover{
+    filter:brightness(1);
 }
 
 #current a img{
@@ -228,6 +244,10 @@ section{
     border-radius:20px;
 }
 
+.button:hover{
+    font-size:14px;
+}
+
 /* Upper nav */
 #browse-cathegories{
     row-gap: 20px;
@@ -276,11 +296,41 @@ section{
     width:150px;
 }
 
+.image-container{
+    position:relative;
+}
+
+.play{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size:50px;
+    color:black;
+}
+
+.black-layer{
+    width:150px;
+    height:150px;
+    background-color: rgba(0,0,0,0.3);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.album:hover .play{
+    display: inline-block;
+}
+
+.album:hover .black-layer{
+    display:inline-block;
+}
+
 .album-title{
     color:white;
     font-weight: bold;
     font-size:15px;
-    padding-top:20px;
+    padding-top:10px;
     width:100%;
 }
 
@@ -328,8 +378,21 @@ footer{
     color:rgb(200,200,200)
 }
 
+.footer-title:hover,
+.footer-author:hover{
+    text-decoration: underline;
+}
+
 .ten-c-gapped{
     column-gap:10px;
+}
+
+.greyed{
+    filter:invert(1) brightness(0.5);
+}
+
+.greyed:hover{
+    filter:invert(1);
 }
 
 .ten-r-gapped{
@@ -341,10 +404,26 @@ footer{
     column-gap:15px;
 }
 
+#play-button-item{
+    width:25px;
+    height:25px;
+    position:relative;
+}
+
 #play-button{
     font-size:25px;
     margin:0 5px;
+    position:absolute;
+    top:0;
+    left:0;
+    transform: translateX(-25%);
 }
+
+#play-button:hover{
+    font-size:30px;
+    transform: translate(-25%,-10%)
+}
+
 
 #flow p{
     font-weight: bold;
@@ -368,7 +447,7 @@ footer{
     position: relative;
 }
 
-.timesphere{
+.timesphere, .volumesphere{
     width:10px;
     height:10px;
     background-color: white;
@@ -377,6 +456,14 @@ footer{
     right:0;
     top:0;
     transform: translateY(-25%);
+}
+
+.duration:hover .current-duration{
+    background-color: lightgreen;
+}
+
+.duration:hover .timesphere{
+    display:inline-block;
 }
 
 .volume-bar{
@@ -390,5 +477,14 @@ footer{
     width: 30%;
     background-color: white;
     height: 5px;
-    border-radius:5px;   
+    border-radius:5px;  
+    position:relative; 
+}
+
+.volume-bar:hover .current-volume{
+    background-color: lightgreen;
+}
+
+.current-volume:hover .volumesphere{
+    display:inline-block;
 }
