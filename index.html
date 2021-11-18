@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
     <title>Spotify Replica</title>
 </head>
@@ -13,7 +17,7 @@
     <main>
         <!-- Left nav -->
         <nav>
-            <div id="nav-container" class="container flex-column spacebetween">
+            <div id="nav-container" class="flex-column spacebetween">
                 <ul class="upper flex-column">
                     <li id="logo">
                         <a class="xsmobile flex-row center-aligned" href="#">
@@ -25,8 +29,8 @@
                     </li>
                     <li>
                         <ul id="library" class="flex-column">
-                            <li class="flex-row center-aligned">
-                                <a href="#" id="current" class="mobil"><img src="img/home.svg" alt=""></a>
+                            <li id="current" class="flex-row center-aligned">
+                                <a href="#" class="mobil"><img src="img/home.svg" alt=""></a>
                                 <a href="#">Home</a>
                             </li>
                             <li class="flex-row center-aligned">
@@ -40,7 +44,7 @@
                         </ul>
                     </li>
                     <li class="mobil">
-                        <p class="uppercase">Playlist</p>
+                        <p class="uppercase nav-section-title">Playlist</p>
                         <ul id="playlists" class="flex-column smallscreen-hidden">
                             <li id="add-playlist"><a class="flex-row center-aligned" href=""><span class="square">+</span>Crea playlist</a></li>
                             <li><a href="#">Nome playlist</a></li>
@@ -115,21 +119,21 @@
                 </div>
                 <div>
                     <p class="big-title">Creato per John Doe</p>
-                <p>Più ascolti, più accurati saranno i suggerimenti.</p>
-                <ul id="second-row" class="flex-row wrap">
-                    <li class="album">
-                        <img class="hover-2" src="img/radar.jpeg" alt="">
-                        <p class="album-title">Release Radar</p>
-                    </li>
-                    <li class="album">
-                        <img class="hover-2" src="img/mixdaily.jpeg" alt="">
-                        <p class="album-title">Daily Mix 1</p>
-                    </li>
-                </ul>
+                    <p class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</p>
+                    <ul id="second-row" class="flex-row wrap">
+                        <li class="album">
+                            <img class="hover-2" src="img/radar.jpeg" alt="">
+                            <p class="album-title">Release Radar</p>
+                        </li>
+                        <li class="album">
+                            <img class="hover-2" src="img/mixdaily.jpeg" alt="">
+                            <p class="album-title">Daily Mix 1</p>
+                        </li>
+                    </ul>
                 </div>
                 <div>
                     <p class="big-title">Artisti più popolari</p>
-                    <p>Più ascolti, più saranno accurati i suggerimenti.</p>
+                    <p class="subtitle">Più ascolti, più saranno accurati i suggerimenti.</p>
                     <ul id="third-row" class="flex-row wrap">
                         <li class="album">
                             <img class="hover-2 circled" src="img/youg.jpeg" alt="">
@@ -147,34 +151,43 @@
         </section>
     </main>
     <footer>
-        <div id="footer-flex" class="flex-row spacebetween">
-            <ul class="flex-row">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-                <li>d</li>
-            </ul>
-            <div class="flex-column">
-                <ul class="flex-row">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                </ul>
-                <div id="flow" class="flex-row spacebetween">
-                    <span>1</span>
-                    <span >
-                        <span id="pointer">2</span>
-                    </span>
-                    <span>3</span>
+        <div id="footer-flex" class="flex-row spacebetween center-aligned">
+            <div class="flex-row spacebetween">
+                <div class="flex-row">
+                    <img class="footer-image" src="img/sinister.jpeg" alt="">
+                    <div class="flex-column">
+                        <p class="footer-title">Sinister</p>
+                        <p class="footer-author">Brano Nome</p>
+                    </div>
+                </div>
+                <div class="flex-row ten-c-gapped">
+                    <i class="far fa-heart"></i> 
+                    <i class="far fa-folder"></i>
                 </div>
             </div>
-            <ul class="flex-row">
-                <li>z</li>
-                <li>v</li>
-                <li>u</li>
-                <li>t</li>
+            <div class="flex-column ten-r-gapped">
+                <ul id="music-player" class="flex-row centered center-aligned">
+                    <li><i class="fas fa-random"></i></li>
+                    <li><i class="fas fa-step-backward"></i></li>
+                    <li><i id="play-button" class="far fa-play-circle"></i></li>
+                    <li><i class="fas fa-step-forward"></i></li>
+                    <li><i class="fas fa-redo-alt"></i>/li>
+                </ul>
+                <div id="flow" class="flex-row center-aligned">
+                    <p>0:25</p>
+                    <div class="duration">
+                        <div class="current-duration">
+                            <div class="timesphere hidden"></div>
+                        </div>
+                    </div>
+                    <p>4:35</p>
+                </div>
+            </div>
+            <ul class="flex-row ten-c-gapped center-aligned">
+                <li><i class="fas fa-list"></i></li>
+                <li><i class="fas fa-desktop"></i></li>
+                <li><i class="fas fa-volume-up"></i></li>
+                <li class="volume-bar"><div class="current-volume"></div></li>
             </ul>
         </div>
     </footer>

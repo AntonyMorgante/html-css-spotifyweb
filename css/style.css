@@ -6,8 +6,8 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size: 14px;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 12px;
     
 }
 
@@ -16,7 +16,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    color:rgb(125,125,125);
+    color:rgb(165,165,165);
 }
 
 .mobile{
@@ -33,11 +33,16 @@ main{
 
 a{
     text-decoration: none;
-    color:rgb(125,125,125); 
+    color:rgb(165,165,165);
+    font-weight: bold; 
 }
 
 ul{
     list-style-type: none;
+}
+
+i{
+    filter:invert(1);
 }
 
 .flex-row{
@@ -70,6 +75,10 @@ ul{
     text-transform: uppercase;
 }
 
+.hidden{
+    display: none;
+}
+
 /* Nav layout */
 nav{
     background-color: black;
@@ -78,8 +87,8 @@ nav{
 }
 
 #nav-container{
-    margin:0 30px;
-    height:calc(100% - 70px);
+    margin:0 20px;
+    height:calc(100% - 80px);
 }
 
 .upper, .downer{
@@ -100,8 +109,19 @@ nav{
     column-gap:5px;
 }
 
+#current{
+    position:relative;
+    left:-20px;
+    padding-left:20px;
+    border-left:3px solid yellow;
+}
+
+#current a{
+    color:white;
+}
+
 #playlists{
-    row-gap:10px;
+    row-gap:15px;
     min-height:60px;
 }
 
@@ -127,6 +147,15 @@ nav{
 #library a img{
     width:30px;
     filter:brightness(0.5);
+}
+
+#current a img{
+    filter:none;
+}
+
+.nav-section-title{
+    color:white;
+    font-weight: bolder;
 }
 
 #download{
@@ -233,6 +262,10 @@ section{
     color:white;
 }
 
+.subtitle{
+    font-weight:bold;
+}
+
 .album{
     padding:10px 0;
     width: 150px;
@@ -246,13 +279,14 @@ section{
 .album-title{
     color:white;
     font-weight: bold;
-    font-size:18px;
+    font-size:15px;
     padding-top:20px;
     width:100%;
 }
 
 .author{
     width:100%;
+    font-weight: bold;
 }
 
 .circled{
@@ -263,7 +297,98 @@ section{
 footer{
     position:fixed;
     bottom:0;
-    height:70px;
+    height:80px;
     width:100%;
     background-color: rgb(40,40,40);
+}
+
+#footer-flex{
+    margin:10px;
+}
+
+#footer-flex>div:first-child{
+    column-gap:30px;
+    align-items: center;
+}
+
+.footer-image{
+    width:30px;
+    margin-right:10px;
+}
+
+.footer-title{
+    color:white;
+    font-size:13px;
+    font-weight: bold;
+}
+
+.footer-author{
+    font-size:9px;
+    font-weight: bold;
+    color:rgb(200,200,200)
+}
+
+.ten-c-gapped{
+    column-gap:10px;
+}
+
+.ten-r-gapped{
+    row-gap:10px;
+}
+
+#music-player{
+    font-size:15px;
+    column-gap:15px;
+}
+
+#play-button{
+    font-size:25px;
+    margin:0 5px;
+}
+
+#flow p{
+    font-weight: bold;
+    color: white;
+    font-size:9px;
+}
+
+.duration{
+    width: 400px;
+    background-color: rgb(125,125,125);
+    height: 5px;
+    border-radius:5px;
+    margin:0 20px;
+}
+
+.current-duration{
+    width:10%;
+    height:5px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.timesphere{
+    width:10px;
+    height:10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right:0;
+    top:0;
+    transform: translateY(-25%);
+}
+
+.volume-bar{
+    width: 150px;
+    background-color: rgb(125,125,125);
+    height: 5px;
+    border-radius:5px; 
+}
+
+.current-volume{
+    width: 30%;
+    background-color: white;
+    height: 5px;
+    border-radius:5px;   
 }
