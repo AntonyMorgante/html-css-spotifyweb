@@ -329,8 +329,9 @@ section{
 
 #second-row,
 #third-row{
-    width: 30%;
+    width: calc(100% - 30px);
     column-gap: 15px;
+    justify-content: flex-start;
 }
 
 .subtitle{
@@ -350,7 +351,7 @@ section{
 
 #second-row .album,
 #third-row .album{
-    width: Calc(100%/2);
+    width: Calc((100%/2) - 30px);
     max-width:150px;
 }
 
@@ -654,9 +655,7 @@ footer{
         flex-wrap: nowrap;
     }
 
-    #first-row,
-    #second-row,
-    #third-row{
+    #first-row{
         justify-content: space-between;
     }
 
