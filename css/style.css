@@ -10,6 +10,7 @@ body{
     font-size: 12px;
     height:100vh;
     width:100%;
+    margin:0;
 }
 
 
@@ -19,7 +20,7 @@ main{
     justify-content: flex-start;
     color:rgb(165,165,165);
     overflow: hidden;
-    height:calc(100vh - 80px);
+    height:calc(100vh - 75px);
     width: 100%;
 }
 
@@ -75,12 +76,20 @@ i{
     flex-wrap: wrap;
 }
 
+.flex-1{
+    flex:1;
+}
+
 .center-aligned{
     align-items: center;
 }
 
 .uppercase{
     text-transform: uppercase;
+}
+
+.xs-hidden{
+    display:none;
 }
 
 .hidden{
@@ -103,12 +112,17 @@ a:hover, .album:hover, i:hover, .button:hover{
 /* Nav layout */
 nav{
     background-color: black;
-    width:200px;
+    width:50px;
 }
 
 #nav-container{
-    margin:0 20px;
+    margin:0 5px;
     height:100%;
+}
+
+nav .flex-row,
+nav.flex-column{
+    justify-content: center;
 }
 
 .upper, .downer{
@@ -227,12 +241,6 @@ nav{
     color:white;
 }
 
-h3{
-    display: inline-block;
-    font-size: 25px;
-    color:white;
-}
-
 nav p{
     color:white;
 }
@@ -247,8 +255,8 @@ section{
     background-color: rgb(20,25,34);
     position: relative;
     padding-top:100px;
-    width:calc(100% - 200px);
-    overflow-x: none;
+    width:calc(100% - 50px);
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
@@ -300,16 +308,9 @@ section{
 
 /* Music section layout */
 .container{
-    margin:30px 15px 20px;
+    margin:30px 30px 20px;
     row-gap: 30px;
 }
-
-#first-row,
-#second-row,
-#third-row{
-    column-gap: 15px;
-}
-
 
 .big-title{
     font-size:25px;
@@ -318,18 +319,39 @@ section{
     color:white;
 }
 
+#first-row{
+    column-gap:15px;
+    row-gap: 15px;
+}
+
+
+#second-row,
+#third-row{
+    width: 30%;
+    column-gap: 15px;
+}
+
 .subtitle{
     font-weight:bold;
 }
 
 .album{
     padding:10px 0;
-    width: 150px;
     text-align: center;
+    flex-shrink:1;
+}
+
+#first-row .album{
+    flex-basis: 180px;
+}
+
+#second-row .album,
+#third-row .album{
+    flex-basis: 180px;
 }
 
 .album img{
-    width:150px;
+    width:100%;
 }
 
 .image-container{
@@ -346,8 +368,8 @@ section{
 }
 
 .black-layer{
-    width:150px;
-    height:150px;
+    width:100%;
+    height:100%;
     background-color: rgba(0,0,0,0.3);
     position:absolute;
     top:0;
@@ -383,20 +405,26 @@ section{
 footer{
     position:fixed;
     bottom:0;
-    height:80px;
+    height:75px;
     width:100%;
     background-color: rgb(40,40,40);
 }
 
 #footer-flex{
-    margin:10px;
+    margin:15px;
 }
 
 /* Right section of footer */
-#footer-flex>div:first-child{
+#reproduced{
     column-gap:30px;
     align-items: center;
+    width:33%;
 }
+
+#reproduced div:first-of-type{
+    justify-content: flex-start;
+}
+
 
 .footer-image{
     width:30px;
@@ -420,6 +448,12 @@ footer{
     text-decoration: underline;
 }
 
+.s-column{
+    display: flex;
+    flex-direction: column;
+    margin-left:10%;
+}
+
 .ten-c-gapped{
     column-gap:10px;
 }
@@ -437,6 +471,10 @@ footer{
 }
 
 /* Central section of footer */
+#musicbar{
+    width:33%;
+}
+
 .ten-r-gapped{
     row-gap:10px;
 }
@@ -466,6 +504,9 @@ footer{
     transform: translate(-25%,-10%)
 }
 
+#flow{
+    width:100%;
+}
 
 #flow p{
     font-weight: bold;
@@ -474,7 +515,7 @@ footer{
 }
 
 .duration{
-    width: 400px;
+    width: 100%;
     background-color: rgb(125,125,125);
     height: 5px;
     border-radius:5px;
@@ -509,8 +550,13 @@ footer{
 }
 
 /* Right section of footer */
+#volume{
+    width:33%;
+    justify-content: flex-end;
+}
+
 .volume-bar{
-    width: 150px;
+    width: 50%;
     background-color: rgb(125,125,125);
     height: 5px;
     border-radius:5px; 
@@ -530,4 +576,46 @@ footer{
 
 .current-volume:hover .volumesphere{
     display:inline-block;
+}
+
+/* Media query changes */
+@media screen and (min-width:577px){
+    nav{
+        width:200px;
+    }
+
+    section{
+        width:calc(100% - 20px);
+    }
+    
+    .xsmobile{
+        display: none;
+    }
+
+    .xs-hidden{
+        display: inline-block;
+    }
+
+    #nav-container{
+        margin: 0 20px;
+    }
+
+    nav .flex-row,
+    nav.flex-column{
+    justify-content: flex-start;
+    }
+
+    #logo a img{
+        width:120px;
+    }
+
+}
+
+@media screen and (min-width:769px) {
+    .s-column{
+        flex-direction: row;
+    }
+    
+
+
 }

@@ -21,35 +21,35 @@
                 <ul class="upper flex-column">
                     <li id="logo">
                         <a class="xsmobile flex-row center-aligned" href="#">
-                            <img src="img/logo-small.svg" alt=""><h3>Spotify</h3>
+                            <img src="img/logo-small.svg" alt="">
                         </a>
-                        <a class="mobile" href="#">
+                        <a class="xs-hidden" href="#">
                             <img src="img/logo.svg" alt="">
                         </a>
                     </li>
                     <li>
                         <ul id="library" class="flex-column">
                             <li id="current">
-                                <a href="#" id="white-hover" class="flex-row center-aligned mobil">
+                                <a href="#" id="white-hover" class="flex-row center-aligned">
                                     <img class="white-hovered" src="img/home.svg" alt=""> 
-                                    <span>Home</span>
+                                    <span class="xs-hidden">Home</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" id="white-hover" class="flex-row center-aligned mobil">
+                                <a href="#" id="white-hover" class="flex-row center-aligned">
                                     <img class="white-hovered" src="img/search.svg" alt=""> 
-                                    <span>Cerca</span>
+                                    <span class="xs-hidden">Cerca</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" id="white-hover" class="flex-row center-aligned mobil">
+                                <a href="#" id="white-hover" class="flex-row center-aligned">
                                     <img class="white-hovered" src="img/libreria.svg" alt=""> 
-                                    <span>La tua libreria</span>
+                                    <span class="xs-hidden">La tua libreria</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="mobil">
+                    <li class="xs-hidden">
                         <p class="uppercase nav-section-title">Playlist</p>
                         <ul id="playlists" class="flex-column smallscreen-hidden">
                             <li id="add-playlist"><a class="flex-row center-aligned" href=""><span class="square">+</span>Crea playlist</a></li>
@@ -66,10 +66,16 @@
                 <ul class="downer flex-column">
                     <li id="download" class="border-bot white-hover">
                         <a class="flex-row center-aligned" href="#">
-                            <img class="white-hovered" src="img/download.svg" alt=""> Installa app
+                            <img class="white-hovered" src="img/download.svg" alt="">
+                            <span class="xs-hidden">Installa app</span> 
                         </a>
                     </li>
-                    <li id="profile"><a class="flex-row center-aligned" href="#"><img src="img/profile.svg" alt=""> John Doe</a></li>
+                    <li id="profile">
+                        <a class="flex-row center-aligned" href="#">
+                            <img src="img/profile.svg" alt="">
+                            <span class="xs-hidden">John Doe</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -94,7 +100,7 @@
             <div class="container flex-column">
                 <div>
                     <p class="big-title">Recently Played</p>
-                    <ul id="first-row" class="flex-row wrap">
+                    <ul id="first-row" class="flex-row wrap spacebetween flex-1">
                         <li class="album">
                             <div class="image-container">
                                 <img class="hover-2" src="img/metal_lifting.jpg" alt="">
@@ -168,7 +174,7 @@
                 <div>
                     <p class="big-title">Creato per John Doe</p>
                     <p class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</p>
-                    <ul id="second-row" class="flex-row wrap">
+                    <ul id="second-row" class="flex-row wrap spacebetween">
                         <li class="album">
                             <div class="image-container">
                                 <img class="hover-2" src="img/radar.jpeg" alt="">
@@ -194,7 +200,7 @@
                 <div>
                     <p class="big-title">Artisti più popolari</p>
                     <p class="subtitle">Più ascolti, più saranno accurati i suggerimenti.</p>
-                    <ul id="third-row" class="flex-row wrap">
+                    <ul id="third-row" class="flex-row wrap spacebetween">
                         <li class="album">
                             <div class="image-container">
                                 <img class="hover-2 circled" src="img/youg.jpeg" alt="">
@@ -224,20 +230,23 @@
     </main>
     <footer>
         <div id="footer-flex" class="flex-row spacebetween center-aligned">
-            <div class="flex-row spacebetween">
-                <div class="flex-row">
-                    <img class="footer-image" src="img/sinister.jpeg" alt="">
-                    <div class="flex-column">
-                        <a href="#" class="footer-title">Sinister</a>
-                        <a href="#" class="footer-author">Brano Nome</a>
+            <div id="reproduced">
+                <div class="flex-row spacebetween">
+                    <div class="flex-row">
+                        <img class="footer-image" src="img/sinister.jpeg" alt="">
+                        <div class="flex-column">
+                            <a href="#" class="footer-title">Sinister</a>
+                            <a href="#" class="footer-author">Brano Nome</a>
+                        </div>
+                    </div>
+                    <div class="s-column ten-r-gapped ten-c-gapped big-i">
+                        <i class="far fa-heart greyed"></i> 
+                        <i class="far fa-folder greyed"></i>
                     </div>
                 </div>
-                <div class="flex-row ten-c-gapped big-i">
-                    <i class="far fa-heart greyed"></i> 
-                    <i class="far fa-folder greyed"></i>
-                </div>
+
             </div>
-            <div class="flex-column ten-r-gapped">
+            <div id="musicbar" class="flex-column ten-r-gapped">
                 <ul id="music-player" class="flex-row centered center-aligned">
                     <li><i class="fas fa-random"></i></li>
                     <li><i class="fas fa-step-backward"></i></li>
@@ -247,7 +256,7 @@
                         </div>
                     </li>
                     <li><i class="fas fa-step-forward"></i></li>
-                    <li><i class="fas fa-redo-alt"></i>/li>
+                    <li><i class="fas fa-redo-alt"></i>
                 </ul>
                 <div id="flow" class="flex-row center-aligned">
                     <p>0:25</p>
@@ -259,7 +268,7 @@
                     <p>4:35</p>
                 </div>
             </div>
-            <ul class="flex-row ten-c-gapped center-aligned">
+            <ul id="volume" class="flex-row ten-c-gapped center-aligned">
                 <li><i class="fas fa-list"></i></li>
                 <li><i class="fas fa-desktop"></i></li>
                 <li><i class="fas fa-volume-up"></i></li>
