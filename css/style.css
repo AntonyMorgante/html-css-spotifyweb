@@ -320,6 +320,7 @@ section{
 }
 
 #first-row{
+    width:calc(100% - 30px);
     column-gap:15px;
     row-gap: 15px;
 }
@@ -342,12 +343,14 @@ section{
 }
 
 #first-row .album{
-    flex-basis: 180px;
+    width: Calc((100% / 2) - 30px);
+    max-width:150px;
 }
 
 #second-row .album,
 #third-row .album{
-    flex-basis: 180px;
+    width: Calc(100%/2);
+    max-width:150px;
 }
 
 .album img{
@@ -421,8 +424,8 @@ footer{
     width:33%;
 }
 
-#reproduced div:first-of-type{
-    justify-content: flex-start;
+#reproduced-container{
+    width:33%;
 }
 
 
@@ -579,13 +582,13 @@ footer{
 }
 
 /* Media query changes */
-@media screen and (min-width:577px){
+@media screen and (min-width:576px){
     nav{
         width:200px;
     }
 
     section{
-        width:calc(100% - 20px);
+        width:calc(100% - 200px);
     }
     
     .xsmobile{
@@ -609,13 +612,61 @@ footer{
         width:120px;
     }
 
+    #first-row{
+        flex-wrap: wrap;
+    }
+
+    #first-row .album{
+        width: calc((100% / 2) - 30px);
+        max-width:150px;
+    }
+    
+    #second-row .album,
+    #third-row .album{
+        max-width:150px;
+    }
+
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:768px) {
     .s-column{
         flex-direction: row;
     }
+
+    #first-row{
+        flex-wrap: wrap;
+    }
+
+    #first-row .album{
+        width: calc((100% / 4) - 30px);
+        max-width:150px;
+    }
     
-
-
+    #second-row .album,
+    #third-row .album{
+        max-width:150px;
+    }
 }
+
+@media screen and (min-width: 992px){
+    #first-row{
+        flex-wrap: nowrap;
+    }
+
+    #first-row,
+    #second-row,
+    #third-row{
+        justify-content: space-between;
+    }
+
+    #first-row .album{
+        max-width:150px;
+    }
+    
+    #second-row .album,
+    #third-row .album{
+        max-width:150px;
+    }
+}
+
+
