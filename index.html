@@ -29,17 +29,23 @@
                     </li>
                     <li>
                         <ul id="library" class="flex-column">
-                            <li id="current" class="flex-row center-aligned white-hover">
-                                <a href="#" class="mobil white-hovered"><img src="img/home.svg" alt=""></a>
-                                <a href="#" class="white-hovered">Home</a>
+                            <li id="current">
+                                <a href="#" id="white-hover" class="flex-row center-aligned mobil">
+                                    <img class="white-hovered" src="img/home.svg" alt=""> 
+                                    <span>Home</span>
+                                </a>
                             </li>
-                            <li class="flex-row center-aligned white-hover">
-                                <a href="#" class="mobil white-hovered"><img src="img/search.svg" alt=""></a>
-                                <a href="#" class="white-hovered">Cerca</a>
+                            <li>
+                                <a href="#" id="white-hover" class="flex-row center-aligned mobil">
+                                    <img class="white-hovered" src="img/search.svg" alt=""> 
+                                    <span>Cerca</span>
+                                </a>
                             </li>
-                            <li class="flex-row center-aligned white-hover">
-                                <a href="#" class="mobil white-hovered"><img src="img/libreria.svg" alt=""></a>
-                                <a href="#" class="white-hovered">La tua libreria</a>
+                            <li>
+                                <a href="#" id="white-hover" class="flex-row center-aligned mobil">
+                                    <img class="white-hovered" src="img/libreria.svg" alt=""> 
+                                    <span>La tua libreria</span>
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -59,8 +65,8 @@
                 </ul>
                 <ul class="downer flex-column">
                     <li id="download" class="border-bot white-hover">
-                        <a class="flex-row center-aligned white-hovered" href="#">
-                            <img src="img/download.svg" alt=""> Installa app
+                        <a class="flex-row center-aligned" href="#">
+                            <img class="white-hovered" src="img/download.svg" alt=""> Installa app
                         </a>
                     </li>
                     <li id="profile"><a class="flex-row center-aligned" href="#"><img src="img/profile.svg" alt=""> John Doe</a></li>
@@ -76,7 +82,7 @@
 
             <!-- Upper nav -->
             <ul id="browse-cathegories" class="flex-row centered wrap">
-                <li><a class="uppercase" href="#">In e<span id="highlighted">vide</span>nza</a></li>
+                <li><a id="highlighted" class="uppercase" href="#">In evidenza</a></li>
                 <li><a class="uppercase" href="#">Podcast</a></li>
                 <li><a class="uppercase" href="#">Classifiche</a></li>
                 <li><a class="uppercase" href="#">Generi e mood</a></li>
@@ -226,7 +232,7 @@
                         <a href="#" class="footer-author">Brano Nome</a>
                     </div>
                 </div>
-                <div class="flex-row ten-c-gapped">
+                <div class="flex-row ten-c-gapped big-i">
                     <i class="far fa-heart greyed"></i> 
                     <i class="far fa-folder greyed"></i>
                 </div>
